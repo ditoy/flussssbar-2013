@@ -1,0 +1,19 @@
+# Base Configuration
+baseurl = "/"
+languageCode = "de-ch"
+languageLang = "de"
+title = "Eliane Rutishauser"
+enableRobotsTXT = "true"
+sectionPagesMenu = "main"
+
+# Archetypes Management
+MetaDataFormat = "yaml"
+
+# taxonomies
+[taxonomies]
+#     tag = "tags"
+#     category = "categories"
+#     author = "authors"
+
+[outputs]
+  section = ["HTML", "JSON"]

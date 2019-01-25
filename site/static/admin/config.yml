@@ -1,0 +1,65 @@
+backend:
+  name: git-gateway
+  branch: master
+  accept_roles:
+    - admin
+    - editor
+
+display_url: http://www.elianerutishauser.com
+
+media_folder: "site/static/images/uploads" # Folder where user uploaded files should go
+public_folder: "./images/uploads"
+
+media_library:
+  name: uploadcare
+  config:
+    publicKey: b6cdde67260c1323ad02
+
+collections: # A list of collections the CMS should be able to edit
+
+  - label: "Konfiguration"
+    name: "configuration"
+    files:
+      - label: "Globale Einstellungen"
+        name: "configuration_index"
+        file: "site/content/configuration/config.md"
+        fields:
+          - { label: "Titel", name: "title", widget: "string", tagname: "h1" }
+          - { label: "appFooter", name: "appFooter", widget: "markdown" }
+          - { label: "appColor", name: "appColor", widget: "string", tagname: "p" }
+          - { label: "appTitle", name: "appTitle", widget: "string", tagname: "p" }
+          - { label: "appTitleShort", name: "appTitleShort", widget: "string", tagname: "p" }
+          - { label: "appPublisher", name: "appPublisher", widget: "string", tagname: "p" }
+          - { label: "appDescription", name: "appDescription", widget: "string", tagname: "p" }
+          - { label: "appKeywords", name: "appKeywords", widget: "string", tagname: "p" }
+          - { label: "appImage", name: "appImage", widget: "string", tagname: "p" }
+          - { label: "appSitemapUrl", name: "appSitemapUrl", widget: "string", tagname: "p" }
+          - { label: "appGoogleVerification", name: "appGoogleVerification", widget: "string", tagname: "p" }
+
+  - name: "pages"
+    label: "Pages"
+    folder: "site/content"
+    slug: "{{slug}}"
+    create: false # Allow users to create new documents in this collection
+    fields:
+    - { label: "Publikationsdatum", name: "date", widget: "datetime" }
+    - { label: "Nicht auf Website publizieren", name: "draft", widget: "boolean", default: false, required: false }
+    - { label: "Von Google-Suche ausschliessen", name: "robotsExclude", widget: "boolean", default: false, required: false }
+    - { label: "Titel", name: "title", widget: "string", tagname: "h1" }
+    - { label: "Seiteninhalt", name: "body", widget: "markdown", required: false }
+
+
+  - name: "posts"
+    label: "Posts"
+    folder: "site/content/posts"
+    slug: "{{slug}}"
+    create: true # Allow users to create new documents in this collection
+    fields:
+      - { label: "Publikationsdatum", name: "date", widget: "datetime" }
+      - { label: "Nicht auf Website publizieren", name: "draft", widget: "boolean", default: false, required: false }
+      - { label: "Von Google-Suche ausschliessen", name: "robotsExclude", widget: "boolean", default: false, required: false }
+      - { label: "Titel", name: "title", widget: "string", tagname: "h1" }
+      - { label: "Jahr / Datum", name: "year", widget: "string", tagname: "strong" }
+      - { label: "Bild", name: "image", widget: "image", required: false }
+      - { label: "YouTube Link", name: "youtube", widget: "string", required: false }
+      - { label: "Seiteninhalt", name: "body", widget: "markdown", required: false }

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="de">
+{{partial "head-site" . }}
+<body id="root" class="{{ .Type }} {{ .File.TranslationBaseName }}">
+<div class="wrapper">
+    {{ partial "header" . }}
+    <div class="stripe">
+        <div class="container main" role="main">
+            <h1>{{ .Title }}</h1>
+            <article>
+                {{ .Content }}
+                <ul class="cards">
+                    {{  range $index, $page := .Data.Pages.ByDate.Reverse }}
+                        {{ .Render "card" }}
+                    {{ end }}
+                </ul>
+                <div class="clear"></div>
+            </article>
+        </div>
+    </div>
+    {{ partial "footer" . }}
+</div>
+</body>
+{{partial "javascript" . }}
+</html>

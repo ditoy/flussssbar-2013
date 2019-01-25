@@ -1,0 +1,16 @@
+<head>
+  <meta charset="utf-8">
+  <title>{{ if and (.Title) (not (eq .Permalink "/")) }}{{ .Title | plainify }} – {{ with ($.Site.GetPage "page" "configuration/config.md") }}{{ .Params.appTitleShort }}{{ end }}{{ else }}{{ with ($.Site.GetPage "page" "configuration/config.md") }}{{ .Params.appTitle }}{{ end }}{{ end }}</title>
+  {{ partial "head-common" . }}
+  <meta name="description" content="{{ with ($.Site.GetPage "page" "configuration/config.md") }}{{ .Params.appDescription }}{{ end }}" />
+  <link rel="image_src" href="{{ with ($.Site.GetPage "page" "configuration/config.md") }}{{ .Params.appImage }}{{ end }}" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="{{ with ($.Site.GetPage "page" "configuration/config.md") }}{{ .Params.appImage }}{{ end }}" />
+  <meta name="twitter:title" content="{{ with ($.Site.GetPage "page" "configuration/config.md") }}{{ .Params.appTitle }}{{ end }}" />
+  <meta name="twitter:description" content="{{ with ($.Site.GetPage "page" "configuration/config.md") }}{{ .Params.appDescription }}{{ end }}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="{{ with ($.Site.GetPage "page" "configuration/config.md") }}{{ .Params.appTitle }}{{ end }}" />
+  <meta property="og:description" content="{{ with ($.Site.GetPage "page" "configuration/config.md") }}{{ .Params.appDescription }}{{ end }}" />
+  <meta property="og:url" content="{{ with ($.Site.GetPage "page" "configuration/config.md") }}{{ .Params.appSitemapUrl }}{{ .Permalink }}{{ end }}" />
+  <meta property="og:image" content="{{ with ($.Site.GetPage "page" "configuration/config.md") }}{{ .Params.appImage }}{{ end }}" />
+</head>

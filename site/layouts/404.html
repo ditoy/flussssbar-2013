@@ -1,0 +1,31 @@
+{{ partial "head-flussssbar" }}
+<html lang="de">
+{{ partial "head-site" . }}
+<body id="root" class="{{ .Type }} {{ .File.TranslationBaseName }}">
+{{ partial "header" . }}
+
+<div role="main">
+    <div class="stripe">
+        <div class="container">
+            <article class="main introduction">
+                <div class="error404">
+                    <h1>
+                        Fehler 404
+                    </h1>
+                    <p class="text-center">Leider existiert die angeforderte Seite nicht.</p>
+                    <div class="spacer-3x"></div>
+                    <p class="text-center">
+                        <a href="/" class="btn">Hier geht es zur Startseite</a>
+                    </p>
+                    <div class="spacer-3x"></div>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+
+{{ partial "footer" . }}
+</body>
+{{ partial "schema/global" . }}
+{{ partial "javascript" . }}
+</html>

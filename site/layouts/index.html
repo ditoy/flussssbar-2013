@@ -1,0 +1,20 @@
+<!doctype html>
+{{ partial "head-flussssbar" }}
+<html lang="de">
+{{ partial "head-site" . }}
+<body id="root" class="home {{ .Type }} {{ .File.TranslationBaseName }}">
+    <div role="main">
+        <a href="#intro">
+            <div class="hero">
+                <div class="logooverlay"></div>
+            </div>
+        </a>
+        <div class="container">
+            <a name="intro"></a>
+            {{ .Content }}
+        </div>
+    </div>
+</body>
+{{ partial "schema/global" . }}
+{{ partial "javascript" . }}
+</html>

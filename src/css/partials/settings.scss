@@ -1,0 +1,43 @@
+// grid widths
+$w-grid:        96%;
+$w-gutter:      4%;
+$w-container:   1300px;
+
+
+// colors
+$c-white:       #FEFEFE;
+$c-lightgray:   #E9E9E9;
+$c-mediumgray:  #E5E5E5;
+$c-gray:        #6A6A6A;
+$c-darkgray:    #363636;
+$c-black:       #000000;
+
+$c-primary:     #0083CB;
+$c-secondary:   $c-darkgray;
+
+
+// navbar height
+$h-navbar:      0px;
+
+
+// base spacing
+$spacer:        1em;
+
+
+// fonts
+$f-regular:     'Roboto', Helvetica, Arial, sans-serif;
+$f-headings:    'Roboto', Helvetica, Arial, sans-serif;
+
+
+// transitions
+$tr-speed-fast: 200ms;
+$tr-speed:      600ms;
+$tr-speed-slow: 800ms;
+$tr-scope:      all;
+$tr-ease:       cubic-bezier(0.15, 1.05, 0.9, 1);
+$tr-ease-alt:   cubic-bezier(0.15, 0.95, 0.8, 1);
+$tr-ease-linear:cubic-bezier(0.15, 0.45, 0.85, 1);
+
+
+// breakpoints (for include-media)
+$breakpoints:   (phone: 600px, tablet: 768px, desktop: 1200px, mega: 1600px);

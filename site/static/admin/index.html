@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eliane Rutishauser CMS</title>
+    <link rel="stylesheet" href="https://unpkg.com/netlify-cms@^2.1.0/dist/cms.css" />
+    <script async src="https://identity-js.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script async src="https://unpkg.com/netlify-cms@^2.1.0/dist/netlify-cms.js"></script>
+</head>
+<body>
+<script>
+
+    /**
+     * Uploadcare config
+     */
+
+    UPLOADCARE_LOCALE = 'de';
+    UPLOADCARE_TABS = "file url instagram facebook dropbox gdrive gphotos flickr";
+    UPLOADCARE_PUBLIC_KEY = 'b6cdde67260c1323ad02';
+
+
+    /**
+     * Netlify CMS config
+     */
+
+    var registerCMS = function () {
+
+        /**
+          * register stylesheet with CMS applet
+          */
+        CMS.registerPreviewStyle("/css/main.css");
+
+        /**
+         * preview template for projects
+         */
+        var ProjectPreview = createClass({
+            preparePictures: function(pictures) {
+                var pics = [];
+                pictures.forEach(function (picture) { pics.push(h('img', {src: picture, style: {padding: '5px', width: 'calc(33% - 10px)', height: 'auto'}}))});
+                return pics;
+            },
+
+            render: function() {
+                var entry = this.props.entry;
+
+                var image = entry.getIn(['data', 'image']);
+                var imageBg = image && this.props.getAsset(image);
+
+                var pictures = entry.getIn(['data', 'projectpictures']);
+                var hasPictures = (pictures && pictures.size > 0);
+
+                var concept = entry.getIn(['data', 'concept']) || false;
+                var planning = entry.getIn(['data', 'planning']) || false;
+                var implementation = entry.getIn(['data', 'implementation']) || false;
+
+                return h('div', {},
+                    h('div', {className: "project netlify-preview"},
+                        imageBg ? h('img', {src: imageBg.toString(), width: '100%', height: 'auto'}) : null,
+                        h('div', {className: "icons bigger text-center"},
+                            concept ? h('img', {src: '/images/uploads/icon_bulb.svg', className: 'icon'}) : null,
+                            planning ? h('img', {src: '/images/uploads/icon_ruler.svg', className: 'icon'}) : null,
+                            implementation ? h('img', {src: '/images/uploads/icon_saw.svg', className: 'icon'}) : null
+                        ),
+                        h('h1', {}, entry.getIn(['data', 'title'])),
+                        h('h4', {className: 'text-center'}, entry.getIn(['data', 'teaser'])),
+                        h('div', {className: 'spacer-2x'}),
+                        h('article', {"className": "text-center"}, this.props.widgetFor('body')),
+                        h('div', {className: 'spacer-4x'}),
+                        hasPictures ? this.preparePictures(pictures) : null
+                    )
+                );
+            }
+
+        });
+        CMS.registerPreviewTemplate("project", ProjectPreview);
+
+
+        /**
+         * preview template for team members
+         */
+        var TeamPreview = createClass({
+            render: function() {
+                var entry = this.props.entry;
+
+                var image = entry.getIn(['data', 'image']);
+                var imageBg = image && this.props.getAsset(image);
+
+                return h('div', {},
+                    h('div', {className: "team netlify-preview"},
+                        h('h1', {}, entry.getIn(['data', 'title'])),
+                        entry.getIn(['data', 'function']) ? h('p', {className: 'text-center'}, entry.getIn(['data', 'function'])) : null,
+                        entry.getIn(['data', 'quote']) ? h('h4', {className: 'text-center'}, '"' + entry.getIn(['data', 'quote']) + '"') : null,
+                        imageBg ? h('img', {src: imageBg.toString(), width: '100%', height: 'auto', className: 'staffimage'}) : null,
+                        h('div', {className: 'spacer-4x'}),
+                        h('article', {"className": "text"}, this.props.widgetFor('body')),
+                        h('div', {className: 'spacer-4x'}),
+                        entry.getIn(['data', 'email']) ? h('a', {href: 'mailto:' + entry.getIn(['data', 'email']), target: '_blank'}, entry.getIn(['data', 'email'])) : null,
+                        h('br'),
+                        entry.getIn(['data', 'phone']) ? h('a', {href: 'tel:' + entry.getIn(['data', 'phone']).replace(/\s/g,''), target: '_blank'}, entry.getIn(['data', 'phone'])) : null,
+                        h('br')
+                    )
+                );
+            }
+        });
+        CMS.registerPreviewTemplate("team", TeamPreview);
+
+
+        /**
+         * preview template for job listings
+         */
+        var JobPreview = createClass({
+            render: function() {
+                var entry = this.props.entry;
+
+                return h('div', {},
+                    h('div', {className: "job netlify-preview"},
+                        h('div', {className: "summary"},
+                            h('h2', {}, entry.getIn(['data', 'title'])),
+                            h('div', {className: 'spacer-4x'}),
+                            h('article', {"className": "text"}, this.props.widgetFor('body'))
+                        )
+                    )
+                );
+            }
+        });
+        CMS.registerPreviewTemplate("job", JobPreview);
+
+
+        /**
+         * preview template for pages
+         */
+        var PagePreview = createClass({
+            render: function() {
+                var entry = this.props.entry;
+
+                return h('div', {},
+                    h('div', {className: "page netlify-preview"},
+                        h('div', {className: "summary"},
+                            h('h1', {}, entry.getIn(['data', 'title'])),
+                            h('div', {className: 'spacer-4x'}),
+                            h('article', {"className": "text"}, this.props.widgetFor('body'))
+                        )
+                    )
+                );
+            }
+        });
+        CMS.registerPreviewTemplate("page", PagePreview);
+        CMS.registerPreviewTemplate("page_index", PagePreview);
+
+    };
+
+
+    /**
+     * register stylesheets and preview template with the Netlify CMS applet
+     */
+    window.onload = function () {
+        registerCMS();
+    }
+</script>
+</body>
+</html>
