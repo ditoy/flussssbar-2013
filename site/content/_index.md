@@ -2,6 +2,8 @@
 date: '2018-11-15'
 title: flussssbar.
 ---
+# flussssbar.
+
 flussssbar jeden Dienstagabend ab 20.15 Uhr, <br>von Mai - August in der Badi Unterer Letten in Zürich <br>Eingang via Kloster Fahr-Weg oder Wasserwerkstr. 131, 8037 Zürich
 
 Beachte auch unser Barvermieten-Service <a href="http://www.barvermieten.ch">www.barvermieten.ch</a><br> sowie unser sympathisches Freiluftkino Filmfluss <a href="http://www.filmfluss.ch">www.filmfluss.ch</a>
