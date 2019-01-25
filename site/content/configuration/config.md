@@ -6,7 +6,7 @@ appFooter: |-
 
   <mailto:info@flussssbar.ch>\
   <a href="https://www.instagram.com/flussssbar/" target="_blank">Folge uns auf Instagram</a>
-appColor: '#000000'
+appColor: '#0083CB'
 appTitle: flussssbar.
 appTitleShort: flussssbar.
 appPublisher: flussssbar.
