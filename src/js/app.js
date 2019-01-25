@@ -53,8 +53,15 @@ const links = document.querySelectorAll('a[href^="#"]');
 if (links.length > 0) {
     links.forEach((link) => {
         link.addEventListener('click', function(e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            const elem = document.querySelector(this.getAttribute('href'));
+            if (elem) {
+                e.preventDefault();
+                window.scroll({
+                    top: elem.getBoundingClientRect().top,
+                    left: 0,
+                    behavior: 'smooth'
+                });
+            }
         });
     });
 }
