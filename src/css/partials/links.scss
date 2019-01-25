@@ -6,7 +6,7 @@ a {
 }
 
 a:hover {
-	color:	$c-lightgray;
+	color:	lighten($c-primary, 15%);
 }
 
 a,

@@ -28,7 +28,7 @@ html {
 }
 
 body {
-  background: $c-primary;
+  background-color: $c-primary;
   color: $c-black;
   font-family: $f-regular;
   font-weight: 300;
@@ -143,8 +143,16 @@ header {
   padding: 1em 0;
 }
 
+.bg-wrapper {
+  background-image: url("/images/bg.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 5em 0;
+}
+
 .container {
-  background: $c-white;
+  background: rgba($c-white, 0.9);
   width: 100%;
   max-width: $w-container;
   margin: 0 auto;
@@ -162,6 +170,13 @@ header {
   @include media(">=tablet") {
     padding: 4rem;
   }
+}
+
+#intro {
+  min-height: 60vh;
+  border-radius: 0.5rem;
+  background: rgba(darken($c-primary, 25%), 0.9);
+  color: $c-white;
 }
 
 article {
@@ -201,19 +216,29 @@ article {
 
 footer {
   padding: 2em 0;
-  color: darken($c-white, 30%);
+  color: $c-white;
   font-size: 0.8rem;
 
+  .container {
+    background: none;
+    border-radius: 0.5rem;
+  }
+
   a {
-    color: darken($c-white, 30%);
-    border: 1px solid transparent;
-    border-bottom-color: darken($c-white, 30%);
+    display: inline-block;
+    position: relative;
+    left: -0.5rem;
+    top: 0.5rem;
+    margin-bottom: 1rem;
+    color: $c-primary;
+    background: $c-white;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
 
     &:hover,
     &:focus {
-      border: 1px solid $c-white;
-      background: $c-white;
-      color: $c-black;
+      color: $c-primary;
+      background: darken($c-white, 15%);
     }
   }
 }

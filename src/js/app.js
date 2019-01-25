@@ -47,13 +47,17 @@ window.onresize = function() {
 
 
 /**
- * action before unload event (does not work on Safari)
+ * smoothscroll to anchor
  */
-const ua = navigator.userAgent.toLowerCase();
-if (ua.indexOf('safari') === -1 || ua.indexOf('chrome') >= -1) {
-    window.addEventListener('beforeunload', (e) => { fadeOut(document.querySelector('.wrapper')); });
+const links = document.querySelectorAll('a[href^="#"]');
+if (links.length > 0) {
+    links.forEach((link) => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+        });
+    });
 }
-
 
 /**
  * menu toggle

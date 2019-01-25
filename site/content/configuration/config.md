@@ -4,8 +4,8 @@ appFooter: |-
   flussssbar.\
   8037 Zürich\
 
-
-  E-Mail: <mailto:info@flussssbar.ch>
+  <mailto:info@flussssbar.ch>\
+  [Instagram](https://www.instagram.com/flussssbar/)
 appColor: '#000000'
 appTitle: flussssbar.
 appTitleShort: flussssbar.
