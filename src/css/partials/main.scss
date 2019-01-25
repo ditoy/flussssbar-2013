@@ -174,9 +174,12 @@ header {
 }
 
 #intro {
-  border-radius: 0.5rem;
   background: rgba(darken($c-primary, 25%), 0.9);
   color: $c-white;
+
+  @include media('>desktop') {
+    border-radius: 0.5rem;
+  }
 }
 
 article {
