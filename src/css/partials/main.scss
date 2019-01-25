@@ -28,7 +28,7 @@ html {
 }
 
 body {
-  background-color: $c-primary;
+  background-color: $c-black;
   color: $c-black;
   font-family: $f-regular;
   font-weight: 300;
@@ -230,15 +230,15 @@ footer {
     left: -0.5rem;
     top: 0.5rem;
     margin-bottom: 1rem;
-    color: $c-primary;
-    background: $c-white;
+    color: $c-white;
+    background: rgba(darken($c-primary, 25%), 0.9);
     padding: 0.5rem;
     border-radius: 0.5rem;
 
     &:hover,
     &:focus {
       color: $c-primary;
-      background: darken($c-white, 15%);
+      background: rgba($c-white, 0.9);
     }
   }
 }
