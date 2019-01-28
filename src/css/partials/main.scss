@@ -235,7 +235,7 @@ article {
 }
 
 footer {
-  padding: 1rem 5rem 1rem 1rem;
+  padding: 0;
   color: $c-white;
   font-size: 0.8rem;
 
@@ -244,45 +244,52 @@ footer {
     border-radius: 0.5rem;
   }
 
-  a:not(.social) {
-    display: inline-block;
-    position: relative;
-    left: -0.5rem;
-    top: 0.5rem;
-    margin-bottom: 1rem;
-    color: $c-white;
-    background: rgba(darken($c-primary, 25%), 0.9);
-    padding: 0.5rem;
-    border-radius: 0.5rem;
+  .contact {
+    float: left;
+    width: calc(100% - 8rem);
 
-    &:hover,
-    &:focus {
-      color: $c-primary;
-      background: rgba($c-white, 0.9);
+    a {
+      display: inline-block;
+      position: relative;
+      left: -0.5rem;
+      top: 0.5rem;
+      margin-bottom: 1rem;
+      color: $c-white;
+      background: rgba(darken($c-primary, 25%), 0.9);
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+
+      &:hover,
+      &:focus {
+        color: $c-primary;
+        background: rgba($c-white, 0.9);
+      }
     }
   }
 
-  a.social {
+  .social {
     float: right;
-    position: relative;
-    top: -2rem;
-    left: 5rem;
-    display: inline-block;
-    border: 0 none;
-    width: auto;
-    height: auto;
-    margin: 1rem 1rem 0 0;
-    padding: 0.5rem 0.5rem 0.2rem 0.5rem;
-    border-radius: 0.5rem;
+    width: 8rem;
 
-    &:hover {
-      background: rgba(darken($c-primary, 25%), 0.9);
-    }
-
-    img {
+    a {
+      float: right;
+      display: block;
       border: 0 none;
-      width: 48px;
-      height: 48px;
+      width: auto;
+      height: auto;
+      margin: 0;
+      padding: 0.5rem 0.5rem 0.2rem 0.5rem;
+      border-radius: 0.5rem;
+
+      &:hover {
+        background: rgba(darken($c-primary, 25%), 0.9);
+      }
+
+      img {
+        border: 0 none;
+        width: 2rem;
+        height: 2rem;
+      }
     }
   }
 }

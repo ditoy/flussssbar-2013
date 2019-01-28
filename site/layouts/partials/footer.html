@@ -1,6 +1,12 @@
 <div class="clear"></div>
 <footer>
     <div class="container">
-        {{ with ($.Site.GetPage "page" "configuration/config.md") }}{{ .Params.appFooter | markdownify }}{{ end }}
+        <div class="social">
+            <a href="https://www.instagram.com/flussssbar/" target="_blank" aria-label="Instagram"><img src="/images/if_instagram.svg" alt="Instagram"></a>
+            <a href="https://www.facebook.com/Flussssbar-181904765193000/" target="_blank" aria-label="Facebook"><img src="/images/if_facebook.svg" alt="Facebook"></a>
+        </div>
+        <div class="contact">
+            {{ with ($.Site.GetPage "page" "configuration/config.md") }}{{ .Params.appFooter | markdownify }}{{ end }}
+        </div>
     </div>
 </footer>
