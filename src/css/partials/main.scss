@@ -8,21 +8,21 @@
  */
 
 html {
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.55;
 
   @include media(">=tablet", "<desktop") {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.6;
   }
 
   @include media(">=desktop", "<mega") {
-    font-size: 17px;
+    font-size: 20px;
     line-height: 1.65
   }
 
   @include media(">=mega") {
-    font-size: 18px;
+    font-size: 21px;
     line-height: 1.7;
   }
 }
