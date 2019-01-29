@@ -6,7 +6,7 @@ appFooter: |-
 
   <mailto:info@flussssbar.ch>
 appColor: '#0083CB'
-appTitle: flussssbar. - Bar Badi Unterer Letten Zürich
+appTitle: flussssbar. - Badi Unterer Letten Zürich
 appTitleShort: flussssbar.
 appPublisher: flussssbar.
 appDescription: flussssbar. in der Badi Unterer Letten Zürich von Mai bis August, jeden Dienstagabend ab 20.15 Uhr.
