@@ -1,5 +1,6 @@
 ---
 title: Site Configuration
+robotsExclude: true
 appFooter: |-
   flussssbar.\
   8037 Zürich\
