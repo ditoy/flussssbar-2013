@@ -5,7 +5,7 @@ title: flussssbar.
 # flussssbar.
 
 
-**Die flussssbar bleibt im 2020 leider geschlossen. Wir freuen uns darauf, Euch im 2021 wieder zu begrüssen.**
+**Die flussssbar bleibt im 2021 leider geschlossen. Wir freuen uns darauf, Euch im 2022 wieder zu begrüssen.**
 
 flussssbar jeden Dienstagabend ab 20.15 Uhr<br>
 von Mai - August in der Badi Unterer Letten in Zürich
