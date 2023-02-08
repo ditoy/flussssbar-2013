@@ -14,5 +14,5 @@ Eingang via Kloster Fahr-Weg oder Wasserwerkstr. 131, 8037 Zürich
 
 [So findest Du die flussssbar.](https://goo.gl/maps/pL3HFSVH7nXdbh1o7)
 
-Beachte auch unser <a href="https://www.barvermieten.ch" target="_blank">Barvermieten-Service</a> sowie unser sympathisches <a href="https://www.filmfluss.ch" target="_blank">Freiluftkino Filmfluss</a>.
+Beachte auch unser [Barvermieten-Service](https://www.barvermieten.ch){:target="_blank"} sowie unser sympathisches [Freiluftkino Filmfluss](https://www.filmfluss.ch){:target="_blank"}.
 
