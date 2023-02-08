@@ -2,7 +2,7 @@
 title: Site Configuration
 robotsExclude: true
 appFooter: |-
-  flussssbar.\
+  flussssbar\
   8037 Zürich\
 
   <mailto:info@flussssbar.ch>
