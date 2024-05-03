@@ -5,7 +5,7 @@ appFooter: |-
   flussssbar\
   8037 Zürich\
 
-  <mailto:info@flussssbar.ch>
+  <info(at)flussssbar.ch>
 appColor: '#0083CB'
 appTitle: flussssbar. - Badi Unterer Letten Zürich
 appTitleShort: flussssbar.
