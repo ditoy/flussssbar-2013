@@ -5,9 +5,9 @@ title: flussssbar.
 # flussssbar.
 
 
-**Wir freuen uns darauf, Euch am 2. Mai 2023 wieder zu begrüssen.**
+**Wir freuen uns darauf, Euch vom 14. Mai bis zum 8. August 2024 wieder zu begrüssen.**
 
-flussssbar jeden Dienstagabend ab 20.15 Uhr bei jeder Witterung<br>
+flussssbar jeden Dienstag und Donnerstag ab 20.15 Uhr bei jeder Witterung<br>
 von Mai - August in der Badi Unterer Letten in Zürich
 
 Eingang via Kloster Fahr-Weg oder Wasserwerkstr. 131, 8037 Zürich
