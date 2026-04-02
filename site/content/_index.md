@@ -5,7 +5,7 @@ title: flussssbar.
 # flussssbar.
 
 
-**Wir freuen uns darauf, Euch vom 27. Mai bis zum 28. August 2025 wieder zu begrüssen.**
+**Wir freuen uns darauf, Euch vom 26. Mai bis zum 27. August 2026 wieder zu begrüssen.**
 
 flussssbar jeden Dienstag und Donnerstag ab 20.15 Uhr bei jeder Witterung<br>
 von Mai - August in der Badi Unterer Letten in Zürich
